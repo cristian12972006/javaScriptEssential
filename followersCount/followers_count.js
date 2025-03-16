@@ -16,3 +16,9 @@ function increaseCount() {
           alert("¡Tu publicación de Instagram ganó 20 seguidores! ¡Sigue así!");
         }
       }
+
+    function reset(){
+        count=0;
+        document.getElementById('countDisplay').innerHTML=count;
+        alert("el conteo de seguidores ha sido restablecido.");
+    }
