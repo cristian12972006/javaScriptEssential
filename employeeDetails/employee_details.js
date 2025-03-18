@@ -1,7 +1,7 @@
 const employees = [
-    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
+    { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 , especialization: 'JavaScrip'},
+    { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000, especialization: 'Java' },
+    { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 , especialization: 'HTML'},
     //... Se pueden añadir más registros de empleados aquí
   ];
 
@@ -30,6 +30,14 @@ const employees = [
     }else{
         document.getElementById('employeesDetails').innerHTML = 'no se ha encontrado ningún empleado con este ID'
     }
+
+
+  }
+
+  function findEmployeeByEspecialization(){
+    const emploEspe= employees.filter(employee => employee.especialization==='JavaScrip');
+    const emploEspeTota= emploEspe.map((employee, ingex) => `<p>${employee.id}: ${employee.name}: ${employee.age} - ${employee.department} - $${employee.salary}</p>`).join('');
+    ddocument.getElementById('employeesDetails').innerHTML=emploEspeTota;
 
 
   }
