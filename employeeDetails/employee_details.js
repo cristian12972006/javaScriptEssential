@@ -35,9 +35,10 @@ const employees = [
   }
 
   function findEmployeeByEspecialization(){
-    const emploEspe= employees.filter(employee => employee.especialization==='JavaScrip');
-    const emploEspeTota= emploEspe.map((employee, ingex) => `<p>${employee.id}: ${employee.name}: ${employee.age} - ${employee.department} - $${employee.salary}</p>`).join('');
-    ddocument.getElementById('employeesDetails').innerHTML=emploEspeTota;
-
-
+    const hrEmployees=employees.filter(employee => employee.especialization === 'JavaScrip');
+    const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.age} - ${employee.department} - $${employee.salary}</p>`).join('');
+    document.getElementById('employeesDetails').innerHTML=hrEmployeesDisplay;
   }
+
+
+  

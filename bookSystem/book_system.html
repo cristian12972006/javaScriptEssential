@@ -14,12 +14,14 @@
     <textarea id="bookDescription" rows="4"></textarea><br><br>
     <label for="pagesNumber">Número de Páginas</label><br>
     <input type="number" id="pagesNumber"><br><br>
-    <button onclick="addBocks()">Agregar Libro</button>
+    <button onclick="addBook()">Agregar Libro</button>
 
     <h2>Libros</h2>
     <div id="books">
         <!-- los libros se mostrarán aquí -->
+        <button onclick="deletebook()" >Delete</button>
     </div>
+    <button onclick="deletebook()" >Delete</button>
     <script src="./book_system.js"></script>
 </body>
 </html>
